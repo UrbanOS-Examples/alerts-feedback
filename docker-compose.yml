@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    image: "alerts-feedback"
+    networks:
+      - app-tier
+    ports:
+      - "8080:8080"
+    environment:
+      REDIS_HOST: "redis"
+      RAPTOR_API_KEY: ""
+  redis:
+    image: "docker.io/bitnami/redis:latest"
+    networks:
+      - app-tier
+    ports:
+      - "6379:6379"
+    environment:
+      ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - "redis_data:/bitnami/redis/data"
+
+volumes:
+  redis_data:
+    driver: local
+
+networks:
+  app-tier:
+    driver: bridge

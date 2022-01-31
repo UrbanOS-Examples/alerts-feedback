@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: alerts-feedback
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app: alerts-feedback
+spec:
+  selector:
+    app: alerts-feedback
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.targetPort }}
+  type: NodePort

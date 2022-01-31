@@ -1,0 +1,27 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#17a9fd",
+        "activityBar.activeBorder": "#017e4c",
+        "activityBar.background": "#17a9fd",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#017e4c",
+        "activityBarBadge.foreground": "#e7e7e7",
+        "statusBar.background": "#17a9fd",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#ac6802",
+        "titleBar.activeBackground": "#17a9fd",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#df870299",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#df8702",
+    "files.exclude": {
+        "**/*.js": { "when": "$(basename).ts" },
+        "**/*.js.map": true
+    },
+    "editor.formatOnSave": true
+}
